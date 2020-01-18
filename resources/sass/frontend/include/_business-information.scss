@@ -1,0 +1,84 @@
+.info-box {
+    @include float-css;
+    padding: 18px 0px 18px 0px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: $rose-white;
+    z-index: 4000;
+    @at-root #{&}__content {
+        text-align: center;
+        > div {
+            display: inline-block;
+            p {
+                text-align: center;
+                line-height: 20px;
+                font-size: 16px;
+                color: $freespeechblue;
+                @include font-Montserrat-Regular;
+            }
+
+            a {
+                display: inline-block;
+                height: 44px;
+                background-color: $primary-color;
+                border-radius: 6px;
+                text-align: center;
+                color: $white;
+                line-height: 44px;
+                @include font-Montserrat-Medium;
+                font-size: 17px;
+                min-width: 182px;
+                margin-left: 20px;
+
+            }
+        }
+    }
+
+    @at-root #{&}__cancel {
+        position: absolute;
+        right: 75px;
+        top: 20px;
+        width: 44px;
+        height: 44px;
+    }
+}
+.business-information {
+    @include float-css;
+    @at-root #{&}__title {
+        @include float-css;
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            @include font-Signika-Semibold;
+            color: $primary-color;
+            margin: 0px 0px 10px 0px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            @include font-Signika-Regular;
+            color: $paragraph-color;
+            margin: 0px 0px 0px 0px;
+            a {
+                display: inline-block;
+                color: $primary-color;
+            }
+        }
+    }
+    
+    @at-root #{&}__content {
+        @include float-css;
+        padding-top: 15px;
+    }
+
+    .form-control {
+        @include media-breakpoint-down(sm) {
+            height: 32px;
+            padding-left: 12px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+    }
+}

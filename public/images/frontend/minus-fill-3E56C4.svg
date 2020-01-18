@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>minus-fill-3E56C4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 25.9999898 0 25.9999898 25.9999848 0 25.9999848"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blue-Electrical-Info-FIll-2-Copy" transform="translate(-531.000000, -67.000000)">
+            <g id="minus-fill-3E56C4" transform="translate(531.000000, 67.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M6.02213828,13.0492426 L6.02213828,12.9507777 C6.02213828,12.4053363 6.46444297,11.9630316 7.00983359,11.9630316 L18.9906539,11.9630316 C19.5360445,11.9630316 19.9778414,12.4053363 19.9778414,12.9507777 L19.9778414,13.0492426 C19.9778414,13.5946332 19.5360445,14.0369379 18.9906539,14.0369379 L7.00983359,14.0369379 C6.46444297,14.0369379 6.02213828,13.5946332 6.02213828,13.0492426 M12.9999898,-1.5234375e-05 C5.81545859,-1.5234375e-05 -1.015625e-05,5.81443789 -1.015625e-05,12.9999848 C-1.015625e-05,20.1845668 5.81444297,25.9999848 12.9999898,25.9999848 C20.1850289,25.9999848 25.9999898,20.1855316 25.9999898,12.9999848 C25.9999898,5.81545352 20.1860445,-1.5234375e-05 12.9999898,-1.5234375e-05" id="Fill-1" fill="#3E56C4" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

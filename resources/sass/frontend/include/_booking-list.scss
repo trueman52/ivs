@@ -1,0 +1,224 @@
+.booking_list {
+    @include float-css;
+    padding: 50px 0px 50px 0px;
+    @at-root #{&}__card {
+        background-color: $rose-white;
+        margin: 0px 0px 15px 0px;
+
+        @include media-breakpoint-down(md) {
+            margin: 0px 0px 24px 0px;
+        }
+
+        @include float-css;
+        @at-root #{&}__image{
+            width: 12%;
+            float: left;
+
+            @include media-breakpoint-only(md) {
+                width: 23%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                border-radius: 5px 5px 0 0;
+                overflow: hidden;
+            }
+
+            a {
+                display: block;
+                height: 157px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+
+                @include media-breakpoint-down(sm) {
+                    height: 152px;
+                }
+            }
+        }
+
+        @at-root #{&}__content {
+            padding: 30px 30px 20px 30px;
+            width: 88%;
+            float: left;
+
+            @include media-breakpoint-only(md) {
+                padding: 8px 24px;
+                width: 77%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                padding: 12px;
+            }
+
+            @at-root #{&}__left {
+                width: 74%;
+                float: left;
+
+                @include media-breakpoint-only(md) {
+                    width: 60%;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+
+                h3 {
+                    @include font-Signika-Semibold;
+                    color: $secondary-color;
+                    font-size: 25px;
+                    margin: 0 0 1px;
+                    line-height: 32px;
+                    a {
+                        color: inherit;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 0 0 3px;
+                    }
+                }
+
+                h4 {
+                    font-size: 20px;
+                    color: $paragraph-color;
+                    @include font-Bitter-Regular;
+                    margin: 0 0 19px;
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 0 0 8px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
+                        line-height: 17px;
+                        margin: 0 0 8px;
+                    }
+
+                }
+
+                ul {
+                    margin: 0px;
+                    padding: 0px 0px 3px 0px;
+                    width: 100%;
+                    float: left;
+                    display: block;
+                    li {
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #818181;
+                        @include font-Signika-Regular;
+                        width: auto;
+                        margin: 0 50px 0 0;
+
+                        @include media-breakpoint-only(md) {
+                            font-size: 11px;
+                            line-height: 15px;
+                            margin: 0 0 2px;
+                            display: block;
+                            position: relative;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            font-size: 12px;
+                            line-height: 16px;
+                            margin: 0 0 2px;
+                            display: block;
+                            position: relative;
+                        }
+
+                        span {
+                            font-weight: 600;
+                            margin-left: 10px;
+
+                            @include media-breakpoint-only(md) {
+                                position: absolute;
+                                left: 75px;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                position: absolute;
+                                left: 75px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            @at-root #{&}__right {
+                width: 163px;
+                text-align: center;
+                float: right;
+
+                @include media-breakpoint-only(md) {
+                    padding-top: 30px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding-top: 16px;
+                    width: 100%;
+                }
+
+                h5 {
+                    @include font_Signika-Semibold;
+                    font-size: 20px;
+                    margin: 0 0 15px;
+                    text-transform: uppercase;
+                    &.on-hold {
+                        color: $sapphire
+                    }
+
+                    &.confirmed {
+                        color: $killarney
+                    }
+
+                    &.pending {
+                        color: $scarlet
+                    }
+
+                    &.completed {
+                        color: $lightgray
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin: 0 0 14px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin: 0 0 16px;
+                    }
+                }
+
+                .button__view {
+                    @include media-breakpoint-down(sm) {
+                        line-height: 48px;
+                        height: 48px;
+                        font-size: 14px;
+                        @include font-Montserrat-Medium;
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination {
+        margin: 35px 0 0;
+
+        @include media-breakpoint-only(md) {
+            margin: 8px 0 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,645 @@
+.checkout {
+    @include float-css;
+    padding: 50px 0px 50px 0px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 23px 0px 17px 0px;
+    }
+
+    @at-root #{&}__left {
+        max-width: 665px;
+        @include float-css;
+        @at-root #{&}__title {
+            margin: 0 0 28px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 16px;
+            }
+
+            h2 {
+                @include font-Signika-Semibold;
+                margin: 0px 0px 0px 0px;
+                color: $primary-color;
+                font-size: 35px;
+                line-height: 38px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 27px;
+                    line-height: 37px;
+                }
+            }
+        }
+
+        .label {
+            font-size: 16px;
+        }
+
+        @at-root #{&}__content {
+            @include float-css;
+            @at-root #{&}__list {
+                @include float-css;
+                margin-bottom: 20px;
+                border-bottom: 1px solid $silver;
+                @at-root #{&}__title {
+                    padding: 0px 30px 0px 0px;
+                    position: relative;
+                    margin: 0 0 17px;
+
+                    @include media-breakpoint-down(sm) {
+                        margin: 0 0 8px;
+                    }
+
+                    h2 {
+                        font-size: 25px;
+                        line-height: 30px;
+                        @include font-Signika-Semibold;
+                        color: $primary-color;
+                        margin: 0px 0px 0px 0px;
+
+                        @include media-breakpoint-down(sm) {
+                            line-height: 32px;
+                        }
+
+                        .arrow-button {
+                            background: url(/images/frontend/chevron-up-arrow-line.svg) no-repeat center center;
+                            background-size: 28px auto;
+                            cursor: pointer;
+                            display: inline-block;
+                            width: 28px;
+                            height: 18px;
+                            margin-left: 10px;
+                            float: right;
+                            position: absolute;
+                            right: 2px;
+                            top: 4px;
+                            &.collapsed {
+                                background: url(/images/frontend/chevron-down-arrow-line.svg) no-repeat center center;
+                                background-size: 28px auto;
+                            }
+                        }
+
+                        a {
+                            float: right;
+                            display: inline-block;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: $primary-color;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            margin-right: 10px;
+
+                            @include media-breakpoint-down(sm) {
+                                float: left;
+                                display: block;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+
+                    &.collapsed {
+                        .arrow-button {
+                            background: url(/images/frontend/chevron-down-arrow-line.svg) no-repeat center center;
+                            background-size: 28px auto;
+                        }
+                    }
+                }
+
+                #billing_address,
+                #customer_info {
+                    .form-group {
+                        @include media-breakpoint-down(sm) {
+                            margin-bottom: 8px;
+                        }
+                    }
+                    .label {
+                        @include media-breakpoint-down(sm) {
+                            font-size: 12px;
+                            line-height: 20px;
+                            margin-bottom: 4px;
+                        }
+                    }
+
+                    .form-control {
+                        @include media-breakpoint-down(sm) {
+                            height: 32px;
+                            font-size: 12px;
+                            padding-left: 12px;
+                            border-radius: 3px;
+                        }
+                    }
+
+                    .chosen-single {
+                        @include media-breakpoint-down(sm) {
+                            font-size: 12px;
+                            padding: 5px 14px !important;
+                        }
+                    }
+                }
+
+                @at-root #{&}__content {
+                    @include float-css;
+                    @at-root #{&}__customer-info {
+                        padding-bottom: 20px;
+                    }
+
+                    @at-root #{&}__top {
+                        p {
+                            @include  font-Signika-Regular;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $paragraph-color;
+                            margin: 0px 0px 15px 0px;
+
+                            @include media-breakpoint-down(sm) {
+                                font-size: 14px;
+                                margin: 0px 0px 24px 0px;
+                            }
+                        }
+
+                        .form-group__info_block {
+                            margin: 0px 0px 12px 0px;
+                            img {
+                                max-width: none;
+                            }
+
+                            h3 {
+                                @include font-Montserrat-Semibold;
+                            }
+                        }
+                    }
+
+                    textarea {
+                        &.form-control {
+                            height: 90px;
+                        }
+                    }
+
+                    .form-group {
+                        @at-root #{&}__file-upload {
+                            @include float-css;
+                            .file_name {
+                               @include float-css;
+                                margin: 0px 0px 5px 0px;
+                                padding: 0px 30px 0px 12px;
+                                position: relative;
+                                background-color: $azure;
+                                height: 42px;
+                                line-height: 42px;
+                                font-size: 16px;
+                                @include font-Signika-Regular;
+                                color: $paragraph-color;
+                                border-radius: 6px;
+                                .remove_btn {
+                                    position: absolute;
+                                    right: 10px;
+                                    top: -1px;
+                                    width: 22px;
+                                    height: 22px;
+                                    display: block;
+                                }
+                            }
+
+                            .upload_block {
+                                @include float-css;
+                                padding: 18px 0px 0px 0px;
+                                .upload_btn {
+                                    width: 168px;
+                                    float: left;
+                                    display: inline-block;
+                                    margin: 0px 25px 0px 0px;
+                                    padding: 0px 0px 0px 0px;
+                                    position: relative;
+
+                                    @include media-breakpoint-down(sm) {
+                                        width: 100%;
+                                        margin: 0 0 16px;
+                                    }
+
+                                    .upload_file {
+                                       @include float-css;
+                                        height: 44px;
+                                        line-height: 44px;
+                                        text-align: center;
+                                        color: $white;
+                                        border-radius: 6px;
+                                        @include font-Montserrat-Medium;
+                                        font-size: 17px;
+                                        background-color: $primary-color;
+                                    }
+
+                                    #imgInp {
+                                        margin-left: 0;
+                                        padding: 0;
+                                        background: none;
+                                        width: 100%;
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        cursor: pointer;
+                                        opacity: 0;
+                                        left: 0;
+                                    }
+                                }
+
+                                .file_type {
+                                    float: left;
+                                    display: inline-block;
+                                    padding: 0px 0px 0px 0px;
+                                    margin: 0px 0px 0px 0px;
+                                    line-height: 44px;
+                                    @include font-Signika-Regular;
+                                    font-size: 16px;
+                                    color: $very-light-grey;
+
+                                    @include media-breakpoint-down(sm) {
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .phone_block {
+                            float: left;
+                            width: 100%;
+                            padding-left: 87px;
+                            position: relative;
+
+                            &::before {
+                                @include media-breakpoint-down(sm) {
+                                    width: 1px;
+                                    height: 16px;
+                                    background: $gray71;
+                                    position: absolute;
+                                    left: 40px;
+                                    top: 8px;
+                                    content: '';
+                                    z-index: 9;
+                                }
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                padding-left: 42px;
+                            }
+
+                            .code_number {
+                                position: absolute;
+                                width: 77px;
+                                left: 0px;
+                                top: 0px;
+                                padding-left: 35px;
+                                background-color: $lavender-blush;
+                                background-image: url(/images/frontend/ph_bg.png);
+                                background-repeat: no-repeat;
+                                background-position: top left;
+
+                                @include media-breakpoint-down(sm) {
+                                    padding-left: 12px;
+                                    background-image: none;
+                                    width: 44px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @at-root #{&}__coupon {
+                    @include float-css;
+                    margin: 0px 0px 15px 0px;
+                    padding: 50px 150px 70px 0px;
+                    background: url(/images/frontend/couponbg.png) no-repeat right 30px top;
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 3px 0 24px;
+                        background: none;
+                        margin-bottom: 4px;
+                    }
+
+                    @at-root #{&}__title {
+                        @include float-css;
+                        margin: 0 0 20px;
+                        @at-root #{&}__left {
+                            float: left;
+                            font-size: 25px;
+                            line-height: 30px;
+                            @include font-Signika-Semibold;
+                            color: $primary-color;
+
+                            @include media-breakpoint-down(sm) {
+                                font-size: 22px;
+                                line-height: 27px;
+                            }
+
+                        }
+
+                        .coupon_link {
+                            float: right;
+                            display: inline-block;
+                            padding: 0px 40px 0px 0px;
+                            @include font-Signika-Regular;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: $primary-color;
+                            background: url(/images/frontend/export-line.svg) no-repeat right center;
+                            span {
+                                text-decoration: underline;
+                            }
+                            
+                            &:hover {
+                                span {
+                                    text-decoration: none;
+                                }
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    @at-root #{&}__content {
+                        .form-control {
+                            width: 64%;
+                            @include media-breakpoint-down(sm) {
+                                width: 100%;
+                                height: 32px;
+                                font-size: 12px;
+                                border-radius: 5px;
+                                margin: 0 0 24px;
+                            }
+                        }
+
+                        .button__agree {
+                            width: 33%;
+                            float: right;
+                            min-width: auto;
+                            @include media-breakpoint-down(sm) {
+                                width: 100%;
+                                height: 48px;
+                            }
+                        }
+                    }
+                }
+
+                @at-root #{&}__payment {
+                    border-bottom: none;
+                    padding: 20px 0 0;
+                    margin: 0;
+                    @at-root #{&}__title {
+                        margin: 0 0 20px;
+                        @include media-breakpoint-down(sm) {
+                            margin: 0 0 32px;
+                        }
+
+                        h3 {
+                            font-size: 25px;
+                            line-height: 31px;
+                            @include font-Signika-Semibold;
+                            color: $primary-color;
+                            margin: 0 0 15px;
+                        }
+
+                        p {
+                            margin: 0px 0px 0px 0px;
+                            a {
+                                color: $primary-color;
+                                @include font-Signika-Semibold;
+                            }
+                        }
+                    }
+
+                    @at-root #{&}__content {
+                        @at-root #{&}__card {
+                            @include float-css;
+                            margin: 0px 0px 20px 0px;
+                            padding: 35px 175px 35px 45px;
+                            background-color: $rose-white;
+                            border-radius: 6px;
+                            position: relative;
+
+                            @include media-breakpoint-down(sm) {
+                                padding: 12px 21px 15px;
+                            }
+
+                            @at-root #{&}__label {
+                                margin: 0 0 15px;
+                                label {
+                                    font-size: 20px;
+                                    cursor: pointer;
+                                    padding-left: 40px;
+                                    line-height: 24px;
+                                    min-width: 20px;
+                                    min-height: 20px;
+                                    @include font-Signika-Semibold;
+                                    color: $freespeechblue;
+                                    border-radius: 0px;
+                                    background: url(/images/frontend/radio-unchecked.svg) no-repeat left center;
+                                    margin: 0;
+
+                                    @include media-breakpoint-down(sm) {
+                                        font-size: 16px;
+                                        line-height: 20px;
+                                        padding-left: 29px;
+                                    }
+                                }
+
+                                input[type='radio'] {
+                                    &:checked + label {
+                                        background: url(/images/frontend/radio-checked.svg) no-repeat left center;
+                                    }
+                                }
+
+                            }
+
+                            @at-root #{&}__info {
+                                p {
+                                    color: $matterhorn;
+                                    margin: 0;
+                                }
+                            }
+
+                            @at-root #{&}__symbol {
+                                position: absolute;
+                                top: 30px;
+                                right: 35px;
+
+                                @include media-breakpoint-down(sm) {
+                                    top: 12px;
+                                    right: 21px;
+                                }
+
+                                img {
+                                    @include media-breakpoint-down(sm) {
+                                        max-width: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.varify_email {
+    @include float-css;
+    min-height: 640px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 50px 0px 50px 0px;
+
+    @include media-breakpoint-down(md) {
+        background: none !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 24px 0 32px;
+        min-height: 0;
+    }
+
+    @at-root #{&}__title {
+        margin: 0 0 20px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 8px;
+        }
+
+        h2 {
+            @include font-Signika-Semibold;
+            margin: 0px 0px 0px 0px;
+            color: $primary-color;
+            font-size: 35px;
+            line-height: 38px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 27px;
+                line-height: 36px;
+            }
+        }
+    }
+
+    p {
+        margin: 0px 0px 15px 0px;
+        @include font-Signika-Regular;
+        font-size: 16px;
+        line-height: 22px;
+        color: $paragraph-color;
+
+        @include media-breakpoint-only(md) {
+            margin: 0px 0px 24px 0px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+            margin: 0 0 32px;
+        }
+
+        a {
+            color: $primary-color;
+            @include font-Signika-Semibold;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &.resend-email {
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                font-size: 13px;
+                line-height: 22px;
+                @include font-Montserrat-Regular;
+                margin: 0;
+            }
+
+            span {
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                }
+            }
+
+            a {
+                @include font-Montserrat-Bold;
+            }
+        }
+    }
+
+    @at-root #{&}__content {
+        @at-root #{&}__inner {
+            max-width: 350px;
+
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+            }
+
+            .form-group {
+                @include media-breakpoint-down(sm) {
+                   margin: 0 0 17px;
+                }
+
+                .button__full {
+                    @include media-breakpoint-down(sm) {
+                        height: 48px;
+                        line-height: 48px;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .form-control {
+                max-width: 286px;
+
+                @include media-breakpoint-only(md) {
+                    max-width: 340px;
+                    height: 48px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    max-width: 100%;
+                    height: 47px;
+                }
+            }
+        }
+    }
+}
+
+.account_block {
+    @include float-css;
+    padding: 60px 0 170px;
+
+    @include media-breakpoint-only(md) {
+        padding: 50px 0 170px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 24px 0 95px;
+    }
+
+    @at-root #{&}__reset {
+        max-width: 320px;
+
+        @include media-breakpoint-only(md) {
+            max-width: 100%;
+            padding: 0 172px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            @include font-Signika-Semibold;
+            color: $primary-color;
+            margin: 0px 0px 10px 0px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 24px;
+            }
+        }
+    }
+}

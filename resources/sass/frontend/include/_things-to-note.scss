@@ -1,0 +1,249 @@
+.thingstonote {
+    padding: 50px 0px 50px 0px;
+
+    @include media-breakpoint-only(md) {
+        padding: 50px 0px 50px 0px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 24px 0px 24px 0px;
+    }
+
+    .row {
+        > .col-lg-5 {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+
+    @at-root #{&}__left {
+        @include float-css;
+        @at-root #{&}__title {
+            margin-bottom: 20px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 32px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 16px;
+            }
+
+            h2 {
+                @include font-Signika-Semibold;
+                margin: 0px 0px 0px 0px;
+                color: $primary-color;
+                font-size: 35px;
+                line-height: 38px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 27px;
+                    line-height: 37px;
+                }
+            }
+        }
+
+        @at-root #{&}__note {
+            padding-bottom: 15px;
+            border-bottom: 1px solid $silver;
+            margin-bottom: 20px;
+            @include float-css;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 35px;
+            }
+
+            li {
+                margin-bottom: 10px;
+                width: 50%;
+                float: left;
+
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 15px;
+                }
+
+                i {
+                    width: 82px;
+                    height: 82px;
+                    background-color: $gold-tips;
+                    text-align: center;
+                    line-height: 82px;
+                    vertical-align: middle;
+                    @include font-FontAwesome;
+                    font-size: 30px;
+                    color: $white;
+                    display: inline-block;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 65px;
+                        height: 65px;
+                        line-height: 65px;
+                    }
+                }
+
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                    margin: 0 0 10px;
+                }
+
+                h4 {
+                    @include font-Bitter-Semibold;
+                    margin: 0px 0px 0px 0px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $paragraph-color;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 14px;
+                        line-height: 15px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 12px;
+                        line-height: 13px;
+                    }
+                }
+
+                .media-left {
+                    @include media-breakpoint-down(sm) {
+                        padding-right: 12px;
+                    }
+                }
+            }
+        }
+
+        @at-root #{&}__points {
+            h3 {
+                @include font-Signika-Semibold;
+                margin: 0px 0px 10px 0px;
+                font-size: 25px;
+                line-height: 30px;
+                color: $primary-color;
+            }
+
+            ul {
+                margin-bottom: 40px;
+                li {
+                    display: block;
+                    margin: 0px 0px 7px 0px;
+                    padding: 0px 0px 0px 22px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $paragraph-color;
+                    @include font-Signika-Regular;
+                    background: url(/images/frontend/bullet_2.png) no-repeat left 7px;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            @at-root #{&}__submit {
+                @include media-breakpoint-only(md) {
+                    position: fixed;
+                    width: 100%;
+                    bottom: 0;
+                    background: $white;
+                    left: 0;
+                    padding: 15px 50px;
+                    border-top: 1px solid $gray93;
+                    border-bottom: 1px solid $gray93;
+                    z-index: 999;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    position: fixed;
+                    width: 100%;
+                    bottom: 0;
+                    background: $white;
+                    left: 0;
+                    padding: 15px 15px;
+                    border-top: 1px solid $gray93;
+                    border-bottom: 1px solid $gray93;
+                    z-index: 999;
+                }
+
+                .agree_btn {
+                    width: 70%;
+                    float: left;
+                    padding: 0px 10px 0px 0px;
+
+                    @include media-breakpoint-only(lg) {
+                        width: 60%;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        float: right;
+                        width: 67%;
+                        padding:0 0 0 16px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        float: right;
+                        width: 57%;
+                        padding:0 0 0 10px;
+                    }
+
+                    .button {
+                        @include media-breakpoint-only(md) {
+                            width: 100%;
+                            min-width: 0;
+                            line-height: 35px;
+                            height: 35px;
+                            font-size: 14px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                            min-width: 0;
+                            line-height: 35px;
+                            height: 35px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .disagree_btn {
+                    width: 30%;
+                    float: right;
+
+                    @include media-breakpoint-only(lg) {
+                        width: 40%;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        float: left;
+                        width: 33%;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        float: left;
+                        width: 43%;
+                    }
+
+                    .button {
+                        @include media-breakpoint-only(md) {
+                            width: 100%;
+                            min-width: 0;
+                            line-height: 35px;
+                            height: 35px;
+                            font-size: 14px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                            min-width: 0;
+                            line-height: 35px;
+                            height: 35px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

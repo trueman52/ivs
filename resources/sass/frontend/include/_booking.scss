@@ -1,0 +1,755 @@
+.booking {
+    @include float-css;
+    padding: 50px 0px 50px 0px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 32px 0px 32px 0px;
+    }
+
+    @at-root #{&}__left {
+        max-width: 665px;
+        @include float-css;
+        @at-root #{&}__title {
+            margin: 0 0 28px;
+            @include media-breakpoint-only(md) {
+                margin: 0 0 11px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 15px;
+            }
+
+            h2 {
+                @include font-Signika-Semibold;
+                margin: 0px 0px 0px 0px;
+                color: $primary-color;
+                font-size: 35px;
+                line-height: 38px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 27px;
+                    line-height: 37px;
+                }
+
+            }
+        }
+        .label {
+            font-size: 18px;
+        }
+
+        .quantity {
+            max-width: 144px;
+            position: relative;
+            @include float-css;
+
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+            }
+            @at-root #{&}__button {
+                border: none;
+                box-shadow: none;
+                width: 15px;
+                height: 9px;
+                position: absolute;
+                cursor: pointer;
+                @at-root #{&}__up {
+                    background: url(/images/frontend/chevron-up-arrow-line.svg) no-repeat;
+                    top: 6px;
+                    right: 5px;
+                }
+
+                @at-root #{&}__down {
+                    background: url(/images/frontend/chevron-down-arrow-line.svg) no-repeat;
+                    bottom: 6px;
+                    right: 5px;
+                }
+            }
+        }
+
+        @at-root #{&}__content{
+            @include float-css;
+            position: relative;
+
+            h3 {
+                @include media-breakpoint-down(sm) {
+                    margin: 0 0 0;
+                }
+            }
+
+            .checkbox_item {
+                li {
+                    margin: 0 10px 10px 0;
+                    &:nth-child(3n) {
+                        @include media-breakpoint-only(md) {
+                            margin-right: 0;
+                        }
+                    }
+
+                    label {
+                        @include media-breakpoint-only(md) {
+                            width: 215px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                        }
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        margin: 0 0 16px;
+                    }
+                }
+            }
+
+            @at-root #{&}__addons {
+                @include float-css;
+                @at-root #{&}__top {
+                    padding-top: 30px;
+                    margin-top: 30px;
+                    border-top: 1px solid $silver;
+                    padding-bottom: 30px;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-top: -4px;
+                        padding-top: 24px;
+                        padding-bottom: 24px;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        margin-top: 7px;
+                        padding-bottom: 24px;
+                        padding-top: 32px;
+                    }
+
+                    h3 {
+                        @include font-Signika-Semibold;
+                        margin: 0px 0px 5px 0px;
+                        font-size: 22px;
+                        line-height: 27px;
+                        color: $paragraph-color;
+
+                        @include media-breakpoint-only(md) {
+                            margin-bottom: 7px;
+                        }
+                    }
+
+                    p {
+                        @include font-Signika-Regular;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: $paragraph-color;
+                        margin:0;
+
+                        @include media-breakpoint-down(sm) {
+                            font-size: 13px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+
+                @at-root #{&}__content {
+                    @include float-css;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $silver;
+                    margin-bottom: 20px;
+                    position: relative;
+
+                    @include media-breakpoint-down(sm) {
+                        border: none;
+                        padding: 4px;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        border-bottom: none;
+                    }
+
+                    h3 {
+                        margin: 0px 0px 10px 0px;
+                        @include font-Signika-Semibold;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: $paragraph-color;
+                        @include float-css;
+
+                        @include media-breakpoint-only(md) {
+                            margin-bottom: 16px;
+                        }
+
+                        &.table-items {
+                            margin-top: 30px;
+
+                            @include media-breakpoint-down(sm) {
+                                margin-top: 9px;
+                            }
+                        }
+                    }
+
+                    @at-root #{&}__card {
+                        @include float-css;
+                        margin: 0px 0px 15px 0px;
+                        padding: 15px 15px 15px 15px;
+                        background-color: $rose-white;
+                        border-radius: 6px;
+                        overflow: hidden;
+                        position: relative;
+
+                        @include media-breakpoint-down(sm) {
+                            padding: 12px;
+                        }
+
+                        .media-left {
+                            padding-right: 25px;
+
+                            @include media-breakpoint-down(sm) {
+                                vertical-align: top;
+                                padding-right: 8px;
+                            }
+
+                            img {
+                                border-radius: 6px;
+                                overflow: hidden;
+                                max-width: 144px;
+
+                                @include media-breakpoint-down(sm) {
+                                    width: 60px;
+                                    height: auto;
+                                }
+                            }
+                        }
+
+                        .media-body {
+                            h3 {
+                                @include font-Signika-Semibold;
+                                margin: 0px 0px 7px 0px;
+                                font-size: 20px;
+                                line-height: 24px;
+                                color: $freespeechblue;
+
+                                @include media-breakpoint-only(md) {
+                                    margin-bottom: 10px;
+                                }
+
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                }
+                            }
+
+                            p {
+                                @include font-Signika-Regular;
+                                margin: 0px 0px 0px 0px;
+                                font-size: 16px;
+                                line-height: 22px;
+                                color: $lightgray;
+
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 11px;
+                                    line-height: 17px;
+                                }
+                            }
+                        }
+
+                        @at-root #{&}__inner {
+                            @include float-css;
+                            padding: 0px 130px 0px 0px;
+                            position: relative;
+
+                            @include media-breakpoint-down(sm) {
+                                padding-right: 83px;
+                            }
+
+                            .checkbox_item__with-image__full {
+                                li {
+                                    @include media-breakpoint-down(sm) {
+                                        text-align: right;
+                                    }
+
+                                    label {
+                                        @include media-breakpoint-down(sm) {
+                                            width: 21px;
+                                            height: 21px;
+                                            background-size: 21px auto;
+                                            padding: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .booking-quantity {
+                                width: 98px;
+                                position: absolute;
+                                top: 20px;
+                                right: 10px;
+
+                                @include media-breakpoint-down(sm) {
+                                    top: 0px;
+                                    width: 80px;
+                                    right: 0;
+                                }
+
+                                @at-root #{&}__label {
+                                    @include float-css;
+                                    margin: 0px 0px 7px 0px;
+                                    text-align: center;
+                                    @include font-Signika-Regular;
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                    color: $freespeechblue;
+
+                                    @include media-breakpoint-down(sm) {
+                                        font-size: 13px;
+                                        line-height: 15px;
+                                        text-align: right;
+                                    }
+                                }
+
+                                @at-root #{&}__inner {
+                                    position: relative;
+                                    padding: 0px 28px 0px 28px;
+                                    @include float-css;
+
+                                    @include media-breakpoint-down(sm) {
+                                        padding: 0px 21px 0px 21px;
+                                    }
+
+                                    .form-control {
+                                        width: 100%;
+                                        float: left;
+                                        border: none;
+                                        box-shadow: none;
+                                        height: 28px;
+                                        padding-left: 10px;
+                                        background-color: transparent;
+                                        border-radius: 4px;
+                                        @include font-Signika-Regular;
+                                        font-size: 18px;
+                                        color: $paragraph-color;
+                                        outline: none;
+                                        text-align: center;
+
+                                        @include media-breakpoint-down(sm) {
+                                            font-size: 14px;
+                                            height: 21px;
+                                        }
+                                    }
+
+                                    .qty-button {
+                                        border: none;
+                                        box-shadow: none;
+                                        width: 28px;
+                                        height: 28px;
+                                        position: absolute;
+                                        cursor: pointer;
+
+                                        @include media-breakpoint-down(sm) {
+                                            width: 21px;
+                                            height: 21px;
+                                        }
+
+                                        @at-root #{&}__minus {
+                                            background: url(/images/frontend/minus-fill-3E56C4.svg) no-repeat;
+                                            top: 0px;
+                                            left: 0px;
+
+                                            @include media-breakpoint-down(sm) {
+                                                background-size: 100% auto;
+                                            }
+                                        }
+
+                                        @at-root #{&}__inactive {
+                                            background: url(/images/frontend/minus-circle-000000.svg) no-repeat;
+                                            top: 0px;
+                                            left: 0px;
+                                            background-size: 26px auto;
+                                            opacity: 0.3;
+
+                                            @include media-breakpoint-down(sm) {
+                                                background-size: 100% auto;
+                                            }
+                                        }
+
+                                        @at-root #{&}__plus {
+                                            background: url(/images/frontend/plus-fill-3E56C4.svg) no-repeat;
+                                            top: 0px;
+                                            right: 0px;
+
+                                            @include media-breakpoint-down(sm) {
+                                                background-size: 100% auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @at-root #{&}__shadow {
+                        width: 100%;
+                        height: 148px;
+                        float: left;
+                        display: block;
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                        background: url(/images/frontend/Rectangle_shape.png) no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .form-group__info_block {
+        &.bottom_info{
+            @include media-breakpoint-down(md) {
+                margin-top: 32px;
+            }
+
+            .media-left {
+                @include media-breakpoint-down(sm) {
+                    padding-right: 9px;
+                }
+
+                img {
+                    @include media-breakpoint-down(sm) {
+                        width: 20px;
+                        height: auto;
+                        max-width: none;
+                    }
+                }
+            }
+
+            .media-body{
+                @include media-breakpoint-down(sm) {
+                    padding-left: 0;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 16px 12px;
+            }
+
+            h3 {
+                @include media-breakpoint-down(sm) {
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+            }
+
+            h4 {
+                @include media-breakpoint-down(sm) {
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+            }
+        }
+
+    }
+
+}
+
+.sticky-next {
+    position: fixed;
+    bottom: 0;
+    background: $white;
+    padding: 15px 50px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border-top: 1px solid $gray93;
+    border-bottom: 1px solid $gray93;
+
+    @include media-breakpoint-down(sm) {
+        padding: 15px 20px;
+    }
+
+    .float-left {
+        margin-top: 9px;
+    }
+
+    .float-right {
+        .button__agree {
+            @include media-breakpoint-down(sm) {
+                width: 155px;
+                line-height: 35px;
+                font-size: 14px;
+                min-width: 0;
+            }
+        }
+
+    }
+
+    .form-group {
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 14px;
+        line-height: 16px;
+        @include font-Signika-Bold;
+        margin: 0;
+        color: $black;
+    }
+
+    p {
+        font-size: 8px;
+        line-height: 13px;
+        @include font-Signika-Bold;
+        margin: 0;
+        color: $matterhorn;
+    }
+}
+
+.booking-page {
+    #main-nav {
+        .navbar-nav {
+            @include media-breakpoint-only(md) {
+                margin: 0;
+                width: 100%;
+                float: left;
+                display: block;
+            }
+
+            > li {
+                @include media-breakpoint-only(md) {
+                    margin: 0 30px 0 0px;
+                    float: left;
+                    width: auto;
+                    display: inline-block;
+                }
+
+                a {
+                    @include media-breakpoint-only(md) {
+                        font-size: 12px;
+                        line-height: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggler-icon {
+        @include media-breakpoint-down(md) {
+            width: 4px!important;
+            height: 16px!important;
+            background-size: 4px auto!important;
+            background: url(/images/frontend/menu.png) no-repeat right center!important;
+        }
+    }
+
+    .navbar {
+        .container-fluid {
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+
+            .logo {
+                @include media-breakpoint-down(md) {
+                    float: left;
+                }
+            }
+            @include media-breakpoint-down(md) {
+                justify-content: unset;
+            }
+
+            .menu-list {
+                @include media-breakpoint-down(md) {
+                    width: auto;
+                    float: left;
+                    display: inline-block !important;
+                    padding-left: 30px;
+                }
+
+                .navbar-nav {
+                    display: block;
+                    @include media-breakpoint-down(sm) {
+                        display: none;
+                    }
+
+                    &.number-list {
+                        @include media-breakpoint-down(sm) {
+                            display: block!important;
+                            margin-top: -3px;
+                        }
+                    }
+                }
+
+                li {
+                    float: left;
+                    margin: 0 30px 0 0;
+                    @include media-breakpoint-down(sm) {
+                        margin-right: 20px;
+                        position: relative;
+
+                    }
+                    &::after {
+                        @include media-breakpoint-down(sm) {
+                            width: 20px;
+                            height: 1px;
+                            position: absolute;
+                            left: 17px;
+                            top: 11px;
+                            content: '';
+                            background-color: $primary-color;
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            @include media-breakpoint-down(sm) {
+                                display: none;
+                            }
+                        }
+                    }
+                    a {
+                        @include media-breakpoint-down(md) {
+                            font-size: 12px;
+                            line-height: 17px;
+                            color: $light-gray !important;
+
+                            @include media-breakpoint-down(sm) {
+                                font-size: 11px;
+                                line-height: 15px;
+                                border: 1px solid $primary-color;
+                                border-radius: 50%;
+                                color: $primary-color !important;
+                                display: inline-block;
+                                text-align: center;
+                                width: 17px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            @include media-breakpoint-down(md) {
+                                font-size: 12px;
+                                line-height: 17px;
+                                color: $primary-color !important;
+
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 11px;
+                                    line-height: 15px;
+                                    border: 1px solid $primary-color;
+                                    border-radius: 50%;
+                                    color: $white !important;
+                                    display: inline-block;
+                                    text-align: center;
+                                    width: 17px;
+                                    background-color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mobile_menu {
+                float: right;
+                a {
+                    width: 4px;
+                    height: 16px;
+                    background: url(/images/frontend/menu.png) no-repeat center center;
+                    background-size: 100% auto;
+                    display: inline-block;
+                }
+            }
+
+        }
+    }
+
+
+    .selectbox {
+        .chosen-container {
+            .chosen-single {
+                @include media-breakpoint-down(sm) {
+                    font-size: 16px;
+                    line-height: 23px;
+                    height: auto!important;
+                    border-radius: 3px;
+                    white-space: normal;
+                    padding: 10px 14px!important;
+                }
+
+                span {
+                    @include media-breakpoint-down(sm) {
+                        white-space: normal;
+                    }
+                }
+
+                div {
+                    @include media-breakpoint-down(sm) {
+                        top: 0;
+                        height: 100%;
+                    }
+
+                    b {
+                        @include media-breakpoint-down(sm) {
+                            height: 100%;
+                            background-size: 16px auto !important;
+                            background-position: center center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.active {
+        .bottom-list {
+            display: block!important;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #fff;
+            top: 53px;
+            padding: 12px 50px;
+            border-bottom: 1px solid $whisper;
+
+            @include media-breakpoint-down(sm) {
+                padding: 12px 15px;
+            }
+
+            > ul {
+                float: left;
+                display: block;
+                width: 100%;
+
+                > li {
+                    &.currency_select {
+                        margin-left: 32px;
+                    }
+
+                    &:first-child {
+                        float: left;
+                    }
+                    float: right;
+                    margin: 0 0 0 0;
+                    display: inline-block;
+
+                    .dropdown-menu {
+                        position: absolute;
+                    }
+                }
+            }
+
+            a {
+                font-size: 12px;
+                line-height: 18px;
+
+                img {
+                    width: 15px;
+                    height: auto;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+

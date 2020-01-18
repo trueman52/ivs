@@ -1,0 +1,1181 @@
+.booking-summary {
+    @include float-css;
+    padding: 50px 0 50px;
+
+    @include media-breakpoint-only(md) {
+        padding-bottom: 21px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 24px;
+        padding-bottom: 0;
+    }
+
+    @at-root #{&}__top {
+        @include float-css;
+        margin: 0 0 50px;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 16px;
+        }
+
+        @include media-breakpoint-only(md) {
+            margin: 0 0 33px;
+        }
+
+        h1 {
+            font-size: 35px;
+            line-height: 38px;
+            color: $primary-color;
+            margin: 0 0 9px;
+            @include font-Signika-Semibold;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 22px;
+                line-height: 30px;
+                margin: 0 0 8px;
+            }
+        }
+
+        h5 {
+            font-size: 16px;
+            line-height: 22px;
+            color: $paragraph-color;
+            margin: 0 0 0px;
+            @include font-Signika-Regular;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 0 0 24px;
+            }
+
+            span {
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                }
+            }
+
+        }
+
+        .float-right {
+            @include media-breakpoint-only(md) {
+                width: 100%;
+                float: left;
+                margin-top: 30px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                float: left;
+            }
+
+            > ul {
+                @include media-breakpoint-down(sm) {
+                    margin: 0 -4px;
+                }
+
+                > li {
+                    float: left;
+                    @include media-breakpoint-down(sm) {
+                        width: 50%;
+                        padding: 0 4px;
+                    }
+
+                    > a {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $secondary-color;
+                        display: inline-block;
+                        min-width: 229px;
+                        padding: 0 10px;
+                        text-align: center;
+                        border: 1px solid $secondary-color;
+                        line-height: 52px;
+                        border-radius: 5px;
+                        margin-right: 15px;
+                        text-transform: uppercase;
+
+                        @include media-breakpoint-only(md) {
+                            width: 183px;
+                            line-height: 38px;
+                            min-width: auto;
+                            font-size: 15px;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            width: 100%;
+                            min-width: auto;
+                            font-size: 12px;
+                            line-height: 30px;
+                            margin: 0;
+                        }
+
+                        &.data-toggle {
+                            padding-left: 40px;
+                            text-align: left;
+                            margin-right: 0px;
+                            background: url(/images/frontend/chevron-down-arrow-line-blue.svg) no-repeat right 24px center;
+                            background-size: 26px auto;
+
+                            @include media-breakpoint-only(md) {
+                                padding-left: 30px;
+                                background: url(/images/frontend/chevron-down-arrow-line-blue.svg) no-repeat right 20px center;
+                                background-size: 20px auto;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                padding-left: 19px;
+                                background-size: 12px auto;
+                                background-position: right 18px center;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        min-width: 250px;
+                        top: 55px;
+                        border-radius: 3px;
+                        @include box-shadow(0px 1px 5px 1px rgba(0,0,0,0.15));
+                        margin: 0;
+                        overflow: hidden;
+                        padding: 0;
+
+                        @include media-breakpoint-only(md) {
+                            top: 40px
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            right: 0;
+                            left: auto;
+                            top: 32px;
+                        }
+
+                        li {
+                            &.active {
+                                a {
+                                    background-color: $secondary-color;
+                                    color: $white;
+                                }
+                            }
+                        }
+                        a {
+                            font-size: 15px;
+                            color: $secondary-color;
+                            @include font-Montserrat-Semibold;
+                            line-height: 51px;
+                            padding-left: 22px;
+                            display: block;
+                            &:hover {
+                                background-color: $secondary-color;
+                                color: $white;
+                            }
+
+                            @include media-breakpoint-only(md) {
+                                line-height: 40px;
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                font-size: 12px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+
+                    &.show {
+                        .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @at-root #{&}__status {
+        @include float-css;
+        margin: 0 0 50px;
+
+        @include media-breakpoint-only(md) {
+            margin: 0 0 30px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 32px;
+        }
+
+        .media {
+            background: $rose-white;
+            border-radius: 10px;
+            padding: 33px 0px 33px 0;
+            width: 100%;
+
+            @include media-breakpoint-only(md) {
+                display: block;
+                float: left;
+                padding: 24px 30px 30px 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+                float: left;
+                padding: 16px 16px 16px 12px;
+            }
+
+            &.confirmed-payment {
+                padding: 14px 0 17px;
+                @include media-breakpoint-only(md) {
+                    padding: 27px 28px 28px 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 16px 16px 16px 12px;
+                }
+
+                .media-body {
+                    padding-right: 30px;
+                    border-right: 1px solid $gainsborodc;
+
+                    @include media-breakpoint-only(md) {
+                        padding: 0px 0 24px 0;
+                        margin-bottom: 25px;
+                        border-right: none;
+                        border-bottom: 1px solid $gainsborodc;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 0px 0 24px 0;
+                        margin-bottom: 25px;
+                        border-right: none;
+                        border-bottom: 1px solid $gainsborodc;
+                    }
+
+                    p {
+                        @include media-breakpoint-down(md) {
+                            margin: 0;
+                        }
+
+                    }
+                }
+
+                .media-right {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    @include media-breakpoint-only(md) {
+                        width: 100%;
+                        float: left;
+                        display: block;
+                        padding-left: 28%;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        float: left;
+                        display: block;
+                        padding-left: 0;
+                    }
+
+                    p {
+                        @include media-breakpoint-down(md) {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &.payment {
+                padding: 20px 0px 40px 0;
+                margin-top: 10px;
+
+                @include media-breakpoint-only(md) {
+                    padding: 43px 0 10px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 16px;
+                    padding: 16px 16px 16px 12px;
+                }
+
+                p {
+                    @include media-breakpoint-down(sm) {
+                        margin: 0;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                color: $secondary-color;
+                margin: 0 0 5px;
+                line-height: 25px;
+
+                @include media-breakpoint-down(sm) {
+                    line-height: 28px;
+                    margin: 0 0 8px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: $lightgray;
+                margin: 0 0 0px;
+                line-height: 22px;
+
+                @include media-breakpoint-only(md) {
+                    margin-bottom: 30px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                    line-height: 23px;
+                    margin: 0 0 24px;
+                }
+            }
+
+            .media-left {
+                width: 31%;
+                text-align: center;
+                vertical-align: middle;
+
+                @include media-breakpoint-only(md) {
+                    width: 28%;
+                    float: left;
+                    padding: 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+
+                .thumb_img {
+                    img {
+                        @include media-breakpoint-only(md) {
+                            max-width: 50%;
+                        }
+                    }
+                }
+            }
+
+            .media-body {
+                width: auto;
+                vertical-align: middle;
+
+                @include media-breakpoint-only(md) {
+                    width: 72%;
+                    float: left;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                    float: left;
+                }
+
+            }
+
+            .media-right {
+                padding-left: 80px;
+                width: 359px;
+                padding-right: 60px;
+                vertical-align: middle;
+                display: table-cell;
+
+                @include media-breakpoint-only(md) {
+                    width: 100%;
+                    padding-left: 28%;
+                    padding-right: 0;
+                    display: block;
+                    float: left;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                    float: left;
+                    padding: 0;
+                }
+
+                a {
+                    width: 279px;
+                    line-height: 40px;
+                    color: $primary-color;
+                    font-size: 17px;
+                    text-align: center;
+                    @include font-Montserrat-Medium;
+                    display: block;
+                    border: 2px solid $primary-color;
+                    border-radius: 5px;
+                    &.primary-button {
+                        background-color: $primary-color;
+                        color: $white;
+                        margin-bottom: 15px;
+
+                        @include media-breakpoint-only(md) {
+                            margin-right: 10px;
+                            margin-bottom: 0;
+                        }
+
+                        @include media-breakpoint-down(sm) {
+                            margin-bottom: 9px;
+                        }
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        width: 223px;
+                        font-size: 14px;
+                        line-height: 35px;
+                        float: left;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        float: left;
+                        padding: 0;
+                        font-size: 13.6px;
+                        line-height: 44px;
+                    }
+
+                    &:last-child {
+                        @include media-breakpoint-down(md) {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root #{&}__customer-details {
+        @include float-css;
+        .customer-info {
+            width: 31%;
+            float: left;
+            height: auto;
+
+            @include media-breakpoint-only(lg) {
+                width: 28%;
+            }
+
+            @include media-breakpoint-only(md) {
+                width: 50%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                margin: 0 0 30px;
+            }
+
+            h4 {
+                font-size: 16px;
+                line-height: 22px;
+                color: $primary-color;
+                margin: 0 0 7px;
+                @include font-Signika-Semibold;
+            }
+
+            h2 {
+                font-size: 35px;
+                line-height: 38px;
+                color: $paragraph-color;
+                margin: 0 0 15px;
+                @include font-Signika-Semibold;
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0 0 8px;
+                    font-size: 25px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 28px;
+                color: $lightgray;
+                margin: 0;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+
+        .order-status {
+            width: auto;
+            float: right;
+            height: auto;
+
+            @include media-breakpoint-only(md) {
+                float: left;
+                margin-top: 30px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 24px;
+            }
+
+            li {
+                width: 197px;
+                float: left;
+                background: $cinnabar;
+                border-radius: 4px;
+                min-height: 94px;
+                padding: 14px 30px 10px 16px;
+                margin-right: 15px;
+                position: relative;
+                &.amount-due {
+                    &::after {
+                        width: 30px;
+                        height: 100%;
+                        position: absolute;
+                        right: 17px;
+                        content: '';
+                        top: 0;
+                        background: url(/images/frontend/prohibition-line-FFFFFF.svg) no-repeat right center;
+
+                        @include media-breakpoint-down(sm) {
+                            right: 8px;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 140px;
+                    margin-right: 7px;
+                    padding: 10px 30px 5px 11px;
+                    min-height:67px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.on-hold {
+                    background: $sapphire;
+                    &::after {
+                        width: 30px;
+                        height: 100%;
+                        position: absolute;
+                        right: 17px;
+                        content: '';
+                        top: 0;
+                        background: url(/images/frontend/clock-line-FFFFFF.svg) no-repeat right center;
+
+                        @include media-breakpoint-down(sm) {
+                            right: 12px;
+                        }
+                    }
+                }
+
+                &.amount-confirm {
+                    background-color: $killarney48;
+                    &::after {
+                        width: 30px;
+                        height: 100%;
+                        position: absolute;
+                        right: 17px;
+                        content: '';
+                        top: 0;
+                        background: url(/images/frontend/confirmed-circle-FFFFFF.svg) no-repeat right center;
+
+                        @include media-breakpoint-down(sm) {
+                            right: 12px;
+                        }
+                    }
+                }
+
+                &.confirmed {
+                    background-color: $killarney48;
+                    &::after {
+                        width: 30px;
+                        height: 100%;
+                        position: absolute;
+                        right: 17px;
+                        content: '';
+                        top: 0;
+                        background: url(/images/frontend/confirmed-circle-FFFFFF.svg) no-repeat right center;
+
+                        @include media-breakpoint-down(sm) {
+                            right: 12px;
+                        }
+                    }
+                }
+
+                &.completed {
+                    background-color: $paragraph-color;
+                    &::after {
+                        width: 30px;
+                        height: 100%;
+                        position: absolute;
+                        right: 17px;
+                        content: '';
+                        top: 0;
+                        background: url(/images/frontend/calendar-FFFFFF.svg) no-repeat right center;
+
+                        @include media-breakpoint-down(sm) {
+                            right: 12px;
+                        }
+                    }
+                }
+
+                h5 {
+                    font-size: 12.8px;
+                    color: $white;
+                    @include font-Signika-Semibold;
+                    line-height: 15px;
+                    margin: 0;
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 8.2px;
+                        line-height: 11px;
+                    }
+                }
+
+                .price_text {
+                    font-size: 28px;
+                    color: $white;
+                    @include font-Signika-Semibold;
+                    line-height: 32px;
+                    margin: 0 0 3px;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 17.9px;
+                        line-height: 23px;
+                    }
+                }
+
+                .total_price {
+                    font-size: 12.8px;
+                    color: $white;
+                    @include font-Signika-Regular;
+                    line-height: 15px;
+                    margin: 0;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 8.2px;
+                    }
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.booking_content {
+    @include float-css;
+    padding-top: 15px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 0px;
+    }
+
+    @at-root #{&}__booking-details {
+        @include float-css;
+        margin: 0 0 35px;
+
+        @include media-breakpoint-only(md) {
+            margin: 0 0 15px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 31px;
+            color: $primary-color;
+            margin: 0 0 15px;
+            @include font-Signika-Semibold;
+
+            @include media-breakpoint-only(md) {
+                font-size: 16px;
+                line-height: 20px;
+                margin: 0 0 16px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0 0 15px;
+            }
+        }
+
+        @at-root #{&}__card {
+            @include float-css;
+            background-color: $rose-white;
+            margin: 0px 0px 15px 0px;
+            @at-root #{&}__image {
+                width: 38%;
+                float: left;
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+
+                a {
+                    display: block;
+                    height: 279px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: cover;
+                    border-radius: 6px 0 0 6px;
+
+                    @include media-breakpoint-only(md) {
+                        height: 252px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        height: 152px;
+                        border-radius: 6px 6px 0 0px;
+                    }
+                }
+
+                img {
+                    border-radius: 6px 0px 0px 6px;
+                }
+            }
+
+            @at-root #{&}__content {
+                width: 62%;
+                float: left;
+                padding: 30px 25px 20px 50px;
+
+                @include media-breakpoint-only(md) {
+                    padding: 27px 34px 28px 39px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                    padding: 16px 12px;
+                }
+
+                h3 {
+                    @include font-Signika-Semibold;
+                    margin: 0px 0px 7px 0px;
+                    color: $secondary-color;
+                    font-size: 25px;
+                    line-height: 32px;
+                    text-transform: uppercase;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 20px;
+                        line-height: 26px;
+                        margin: 0 0 6px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 17px;
+                        line-height: 21px;
+                        margin: 0 0 10px;
+                    }
+
+                    a {
+                        color: inherit;
+                    }
+                }
+
+                h4 {
+                    @include font-Signika-Regular;
+                    margin: 0px 0px 3px 0px;
+                    color: $primary-color;
+                    font-size: 18px;
+                    line-height: 26px;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin: 0 0 2px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14.4px;
+                        line-height: 20.8px;
+                        margin: 0 0 3px;
+                    }
+                }
+
+                li {
+
+                    padding: 0px 0px 1px 0px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    @include font-Bitter-Regular;
+                    color: $paragraph-color;
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 13px;
+                        line-height: 16px;
+                        margin: 0 0 2px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 12.8px;
+                        line-height: 16px;
+                        margin: 0 0 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root #{&}__booking-periods {
+        @include float-css;
+        @at-root #{&}__title {
+            font-size: 16px;
+            line-height: 22px;
+            @include font-Signika-Semibold;
+            color: $primary-color;
+            margin: 0 0 15px;
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+
+        .form_block {
+            @include float-css;
+
+            .checkbox_item {
+                @include media-breakpoint-only(md) {
+                    float: none;
+                    width: auto;
+                    margin: 0 -4.5px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+
+                li {
+                    @include media-breakpoint-only(md) {
+                        width: 33.33%;
+                        padding: 0 4.5px;
+                        float: left;
+                        margin: 0 0 0;
+                    }
+
+                    label {
+                        @include media-breakpoint-only(md) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .add-to-calendar {
+               @include float-css;
+                padding: 30px 0 50px 22px;
+                border-bottom: 1px solid $silver;
+                margin: 0 0 50px;
+
+                @include media-breakpoint-only(md) {
+                    margin: 0 0 45px;
+                    padding-bottom: 15px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0 0 24px;
+                    padding: 0px 0 25px 11px;
+                }
+
+                a {
+                    padding-left: 39px;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: $freespeechblue;
+                    display: inline-block;
+                    background: url(/images/frontend/plus-line-3E56C4.svg) no-repeat left center;
+                    @include font-Montserrat-Regular;
+                }
+            }
+        }
+    }
+
+    @at-root #{&}__add-ons {
+        @include float-css;
+        @at-root #{&}__title {
+            font-size: 22px;
+            color: $primary-color;
+            @include font-Signika-Semibold;
+            margin: 0 0 15px;
+
+            @include media-breakpoint-only(md) {
+                line-height: 27px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+        }
+
+        @at-root #{&}__card {
+           @include float-css;
+            margin: 0px 0px 15px 0px;
+            padding: 15px 15px 15px 15px;
+            background-color: $rose-white;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            max-width: 622px;
+
+            @include media-breakpoint-only(md) {
+                max-width: 100%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 12px;
+                margin: 0 0 16px;
+            }
+
+            .media-left {
+                padding-right: 60px;
+
+                @include media-breakpoint-only(md) {
+                    padding-right: 72px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding-right: 8px;
+                    vertical-align: top;
+                }
+
+                img{
+                    border-radius: 6px;
+                    overflow: hidden;
+                    max-width: none;
+
+                    @include media-breakpoint-only(md) {
+                        width: 95px;
+                        height: auto;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        width: 65px;
+                        height: auto;
+                    }
+                }
+            }
+
+            .product_info {
+                padding: 0 60px 0 0;
+                @include media-breakpoint-down(sm) {
+                    padding: 0;
+                }
+
+                h3 {
+                    @include font-Signika-Semibold;
+                    margin: 0px 0px 5px 0px;
+                    padding: 0px 0px 0px 0px;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: $freespeechblue;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin: 0 0 4px;
+                    }
+                }
+
+                p {
+                    @include font-Signika-Regular;
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px 0px 0px 0px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $lightgray;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 12px;
+                        line-height: 17px;
+                        margin: 0 0 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.booking-log {
+    @include float-css;
+    padding: 40px 0 35px;
+
+    @include media-breakpoint-only(md) {
+        padding-top: 48px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 8px;
+        padding-bottom: 0;
+    }
+
+    @at-root #{&}__title {
+        font-size: 22px;
+        color: $primary-color;
+        line-height: 27px;
+        margin: 0 0 32px;
+        @include font-Signika-Semibold;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 17.6px;
+            line-height: 22px;
+            margin: 0 0 22px;
+        }
+    }
+    table {
+        @include media-breakpoint-only(md) {
+            margin: 0 0 10px;
+        }
+
+        th {
+            font-size: 16px;
+            line-height: 22px;
+            color: $paragraph-color;
+            padding: 0 0 13px;
+            border-bottom: 2px solid $primary-color;
+            border-top: none;
+
+            &:last-child {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 10px;
+                line-height:14px;
+                padding: 9px 0;
+            }
+
+        }
+        td {
+            font-size: 16px;
+            color: $paragraph-color;
+            line-height: 22px;
+            padding: 13px 0;
+            border-bottom: 1px solid $gainsboro;
+            border-top: none;
+
+            &:last-child {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 10px;
+                line-height:17.6px;
+                padding: 7px 0;
+            }
+
+        }
+    }
+
+}
+
+.download-item {
+    @include float-css;
+    margin: 0 0 50px;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 21px;
+    }
+
+    .row {
+        @include media-breakpoint-only(md) {
+            margin: 0 -10px;
+        }
+
+        .col-md-6 {
+            @include media-breakpoint-only(md) {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    @at-root #{&}__card {
+        @include float-css;
+        background: $lavender-blush url(/images/frontend/vendor-kit.png) no-repeat right bottom;
+        padding: 100px 150px 72px 83px;
+        border-radius: 2px;
+        background-size: 43.6% auto !important;
+
+        @include media-breakpoint-only(md) {
+            padding: 50px 80px 24px 42px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+            background: none!important;
+            margin: 0 0 11px;
+        }
+
+        @at-root #{&}__booking-kit {
+            background: $lavender-blush url(/images/frontend/booking-kit.png) no-repeat right bottom;
+        }
+
+        @at-root #{&}__full {
+            padding-left: 338px;
+            padding-right: 470px;
+            background: $lavender-blush url(/images/frontend/full-booking.png) no-repeat right bottom;
+            background-size: auto !important;
+
+            @include media-breakpoint-only(md) {
+                padding: 51px 322px 46px 42px;
+                background-size: 208px auto!important;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 0px;
+            }
+        }
+
+        h3 {
+            font-size: 35px;
+            line-height: 38px;
+            color: $indigo;
+            margin: 0 0 5px;
+            @include font-Signika-Semibold;
+
+            @include media-breakpoint-only(md) {
+                font-size: 17px;
+                line-height: 19px;
+                margin: 0;
+            }
+
+        }
+
+        p {
+            font-size: 25px;
+            line-height: 35px;
+            color: $indigo;
+            margin: 0 0 30px;
+            @include font-Bitter-Regular;
+
+            @include media-breakpoint-only(md) {
+                font-size: 12.5px;
+                line-height: 17.5px;
+                margin: 0 0 20px;
+            }
+        }
+
+        a {
+            @include media-breakpoint-only(md) {
+                width: 120px;
+                line-height: 22px;
+                height: 22px;
+                min-width: auto;
+                font-size: 8.5px;
+                border-radius: 2.5px
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                font-size: 13.6px;
+                line-height:48px;
+                height: 48px;
+            }
+        }
+    }
+}

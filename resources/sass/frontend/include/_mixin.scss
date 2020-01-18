@@ -1,0 +1,103 @@
+@mixin font-Signika-Regular {
+    font-family: 'Signika', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-Signika-Medium{
+    font-family: 'Signika', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font-Signika-Semibold{
+    font-family: 'Signika', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-Signika-Bold{
+    font-family: 'Signika', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin font-Montserrat-light{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+@mixin font-Montserrat-Regular{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-Montserrat-Medium{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font-Montserrat-Semibold{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-Montserrat-Bold{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-Bitter-Regular{
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin font-Bitter-Medium{
+    font-family: 'Bitter', serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin font-Bitter-Semibold{
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-Bitter-Bold{
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@mixin font-Catamaran-Extra-Bold{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin font-FontAwesome{
+    font-family: FontAwesome;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin float-css {
+    width: 100%;
+    float: left;
+    height: auto;
+}
+
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -ms-box-shadow: $property;
+    box-shadow: $property;
+}

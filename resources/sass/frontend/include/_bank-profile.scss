@@ -1,0 +1,251 @@
+.bankprofile {
+    @include float-css;
+    @at-root #{&}__title {
+        @include float-css;
+
+        @include media-breakpoint-only(md) {
+            margin-bottom: 50px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 31px;
+            @include font-Signika-Semibold;
+            color: $primary-color;
+            margin: 0px 0px 10px 0px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 18px;
+                line-height: 22px;
+                margin: 0px 0px 14px 0px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 22px;
+            @include font-Signika-Regular;
+            color: $paragraph-color;
+            margin: 0px 0px 0px 0px;
+            a {
+                display: inline-block;
+                color: $primary-color;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 21px;
+                margin: 0px;
+            }
+        }
+    }
+
+    @at-root #{&}__content {
+        @include float-css;
+        margin: 0px 0px 20px 0px;
+        padding: 24px 100px 20px 62px;
+        position: relative;
+        background-color: $rose-white;
+        border-radius: 8px;
+
+        @include media-breakpoint-only(md) {
+            padding-bottom: 30px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 12px 48px 12px 12px;
+        }
+
+        h3 {
+            @include font-Signika-Semibold;
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0px 0px 10px 0px;
+            color: $paragraph-color;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0;
+            }
+        }
+
+        h4 {
+            @include font-Signika-Regular;
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0px 0px 10px 0px;
+            color: $nobel;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0;
+            }
+        }
+
+        p{
+            @include font-Signika-Regular;
+            font-size: 16px;
+            line-height: 22px;
+            margin: 0px 0px 0px 0px;
+            color: $paragraph-color;
+        }
+
+        a {
+            width: 28px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -14px;
+            right: 70px;
+
+            @include media-breakpoint-down(sm) {
+                right: 28px;
+            }
+        }
+    }
+
+    @at-root #{&}__addbank {
+        @include float-css;
+        padding-top: 15px;
+        @include media-breakpoint-only(md) {
+            padding-right: 42px;
+        }
+        .nav-tabs {
+            border: none;
+            margin: 0 -10px 20px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 0 -4px 24px;
+            }
+
+            li {
+                margin: 0px 0px 0px 0px;
+                padding: 0px 10px 0px 10px;
+                width: 50%;
+                float: left;
+                display: inline-block;
+                a {
+                    text-align: center;
+                    height: 52px;
+                    line-height: 52px;
+                    color: $light-gray;
+                    @include font-Signika-Semibold;
+                    text-transform: uppercase;
+                    border: 1px solid $light-gray;
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: $white;
+                    border-radius: 8px;
+                    display: block;
+                    font-size: 14px;
+                    &.active {
+                        color: $secondary-color;
+                        border: 1px solid $secondary-color;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 18px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 12px;
+                        line-height:30px;
+                        border-radius: 5px;
+                        height: 32px;
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 0 4px;
+                }
+            }
+        }
+
+        .button__agree {
+            @include media-breakpoint-only(md) {
+                @include font-Montserrat-Medium;
+            }
+
+            @include media-breakpoint-down(sm) {
+                height: 48px;
+                line-height: 48px;
+                @include font-Montserrat-Medium;
+            }
+        }
+
+        .submit_group {
+            @include media-breakpoint-only(md) {
+                margin: 0;
+            }
+
+        }
+
+        .form-control {
+            @include media-breakpoint-down(sm) {
+                height: 32px;
+                font-size: 12px;
+                padding-left: 12px;
+            }
+        }
+
+        .label {
+            @include media-breakpoint-down(sm) {
+                font-size: 12px;
+                line-height: 20px;
+                margin: 0 0 4px;
+            }
+        }
+
+        .radio-buttons {
+            label {
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .form-group__info {
+            p {
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin: 0 0 24px;
+                }
+            }
+
+            h3 {
+                padding: 0 50px;
+            }
+        }
+
+        .form-group {
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 8px;
+            }
+        }
+
+        .radio-buttons {
+            @include media-breakpoint-down(sm) {
+                margin: 8px 0;
+                @include float-css;
+            }
+        }
+    }
+
+    @at-root #{&}__addaccount {
+        @include media-breakpoint-down(sm) {
+            @include float-css;
+            padding-bottom: 15px;
+        }
+
+        .button__addaccount {
+            @include media-breakpoint-down(sm) {
+                height: 48px;
+                line-height: 48px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="7px" viewBox="0 0 13 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>chevron-down-arrow-line</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Quantity-Counter-2" transform="translate(-122.000000, -25.000000)" fill="#E9248C" fill-rule="nonzero">
+            <g id="chevron-down-arrow-line" transform="translate(122.000000, 25.000000)">
+                <path d="M12.1486829,0.168585366 C11.9800976,-1.38777878e-17 11.7061463,-1.38777878e-17 11.537561,0.168585366 L6.16390244,5.55278049 L0.779707317,0.168585366 C0.611121951,-1.38777878e-17 0.337170732,-1.38777878e-17 0.168585366,0.168585366 C-2.08166817e-16,0.337170732 -2.08166817e-16,0.611121951 0.168585366,0.779707317 L5.84780488,6.45892683 C5.93209756,6.54321951 6.03746341,6.58536585 6.15336585,6.58536585 C6.25873171,6.58536585 6.37463415,6.54321951 6.45892683,6.45892683 L12.1381463,0.779707317 C12.3172683,0.611121951 12.3172683,0.337170732 12.1486829,0.168585366 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

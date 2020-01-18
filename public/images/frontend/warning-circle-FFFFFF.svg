@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>warning-circle-FFFFFF</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7B-Log-In" transform="translate(-208.000000, -134.000000)">
+            <g id="Group-3">
+                <g id="warning-circle-FFFFFF" transform="translate(208.000000, 134.000000)">
+                    <path d="M12.7536585,25.4634146 C19.7780488,25.4634146 25.4853659,19.7560976 25.4853659,12.7317073 C25.4853659,5.70731707 19.7780488,0 12.7536585,0 C5.72926829,0 0,5.70731707 0,12.7317073 C0,19.7560976 5.72926829,25.4634146 12.7536585,25.4634146 Z M12.7536585,1.75609756 C18.7902439,1.75609756 23.7073171,6.67317073 23.7073171,12.7097561 C23.7073171,18.7463415 18.7902439,23.6634146 12.7536585,23.6634146 C6.71707317,23.6634146 1.8,18.7463415 1.8,12.7097561 C1.8,6.67317073 6.71707317,1.75609756 12.7536585,1.75609756 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="12.4487805" cy="18.4487805" r="1.44878049"></circle>
+                    <path d="M12.5,6.5 L12.5,13.5" id="Line" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

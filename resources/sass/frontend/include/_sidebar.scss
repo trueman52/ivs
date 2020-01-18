@@ -1,0 +1,173 @@
+.booking_summary {
+    @include float-css;
+    margin: 0px 0px 20px;
+    padding: 25px 35px 25px 35px;
+    border: 1px solid $gainsboro;
+    border-radius: 6px;
+
+    @include media-breakpoint-down(md) {
+        padding: 28px 42px;
+        margin: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+        border: none;
+    }
+
+    @at-root #{&}__title {
+        h3{
+            margin: 0px 0px 15px 0px;
+            padding: 0px 0px 0px 0px;
+            @include font-Signika-Semibold;
+            font-size: 20px;
+            line-height: 24px;
+            color: $primary-color;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .ss_left {
+        width: 65%;
+        float: left;
+        color: $lightgray;
+        span {
+            color: $primary-color;
+        }
+    }
+
+    .ss_right {
+        width: 35%;
+        float: left;
+        text-align: right;
+        color: $lightgray;
+    }
+
+    @at-root #{&}__info {
+        @at-root #{&}__single {
+            &:last-child {
+                border-bottom: 1px solid $silver;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            margin: 0 0 10px;
+            @include float-css;
+
+            @at-root #{&}__top {
+                margin: 0px 0px 10px 0px;
+                @include font-Signika-Semibold;
+                font-size: 16px;
+                line-height: 20px;
+                color: $paragraph-color;
+                @include float-css;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+            }
+
+            @at-root #{&}__bottom {
+                &::before {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    left: 15px;
+                    top: 0px;
+                    background-color: $primary-color;
+                }
+                width: 100%;
+                float: left;
+                padding: 6px 0px 6px 34px;
+                position: relative;
+                @at-root #{&}__top {
+                    @include font-Signika-Regular;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $lightgray;
+                    margin: 0px 0px 0px 0px;
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
+                }
+
+            }
+        }
+    }
+
+    @at-root #{&}__discount {
+        @include float-css;
+        padding: 0px 0px 20px 0px;
+        margin: 0px 0px 10px 0px;
+        border-bottom: 1px solid $silver;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+            line-height: 16px;
+        }
+
+        .ss_left {
+            color: $secondary-color;
+            margin: 0px 0px 7px 0px;
+            @include font-Signika-Semibold;
+        }
+
+        .ss_right {
+            color: $secondary-color;
+            margin: 0px 0px 7px 0px;
+            @include font-Signika-Semibold;
+        }
+
+        p {
+            margin: 0;
+            color: $lightgray;
+            @include media-breakpoint-down(sm) {
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    @at-root #{&}__subtotal {
+        @include float-css;
+        @at-root #{&}__list {
+            margin: 0 0 20px;
+            @include float-css;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+    }
+
+    @at-root #{&}__total {
+        @include float-css;
+        border-top: 1px solid $silver;
+        padding: 10px 0px 0px 0px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+            line-height: 16px;
+            padding: 15px 0px 0px 0px;
+        }
+
+        .ss_left {
+            color: $black;
+            @include font-Signika-Semibold;
+        }
+
+        .ss_right {
+            color: $black;
+            @include font-Signika-Semibold;
+        }
+
+    }
+}

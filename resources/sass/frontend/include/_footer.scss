@@ -1,0 +1,111 @@
+.footer {
+    padding: 68px 0px 45px 0px;
+    background-color: $footer-bg;
+    @include float-css;
+
+    @include media-breakpoint-down(sm) {
+        padding: 32px 0;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 29px;
+        margin: 0px 0px 4px 0px;
+        color: $primary-color;
+        @include font-Montserrat-Medium;
+
+        @include media-breakpoint-only(md) {
+            font-size: 14px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 18px;
+            margin: 0 0 14px;
+        }
+
+    }
+
+    @at-root #{&}__single_col {
+        width: 20%;
+        float: left;
+        padding: 0px 10px 0px 0px;
+        @include media-breakpoint-down(sm) {
+            width: 50%;
+            margin: 0 0 15px;
+        }
+
+        ul{
+            width: 100%;
+            float: left;
+            li{
+                @include media-breakpoint-down(sm) {
+                    margin: 0 0 12px;
+                }
+
+                a{
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 30px;
+                    @include font-Montserrat-light;
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                    @include media-breakpoint-only(md) {
+                        font-size: 14px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+
+            }
+        }
+
+        @at-root #{&}__social {
+            ul {
+                li {
+                    float: left;
+                    margin: 0px 5px 5px 5px;
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    @at-root #{&}__copyright {
+        margin-top: 100px;
+        @include media-breakpoint-only(md) {
+            margin-top: 50px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 0px;
+        }
+
+        p {
+            margin: 0px 0px 0px 0px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+            @include font-Montserrat-light;
+
+            @include media-breakpoint-only(md) {
+                text-align: center;
+                font-size: 14px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+            }
+
+        }
+    }
+}

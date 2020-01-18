@@ -1,0 +1,134 @@
+.profile_wrapper {
+    padding: 50px 0px 50px 0px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 24px;
+        padding-bottom: 17px;
+    }
+
+    @include media-breakpoint-only(md) {
+        padding-top: 34px;
+    }
+
+    @include float-css;
+    .customer_info {
+        @at-root #{&}__title {
+            h3 {
+                font-size: 25px;
+                line-height: 30px;
+                @include font-Signika-Semibold;
+                color: $primary-color;
+                margin: 0px 0px 20px 0px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 22px;
+                    line-height: 27px;
+                    margin: 0 0 24px;
+                }
+            }
+        }
+
+        .form-group {
+            margin: 0 0 18px;
+            @include media-breakpoint-down(sm) {
+                margin: 0 0 8px;
+            }
+
+            &.submit_group {
+                margin-top: 22px;
+                .button__full {
+                    max-width: 100%;
+
+                    @include media-breakpoint-down(sm) {
+                        height: 48px;
+                        line-height: 48px;
+                        @include font-Montserrat-Medium;
+                    }
+                }
+            }
+
+            .label {
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                    line-height: 20px;
+                    margin: 0 0 4px;
+                }
+            }
+
+            .form-control {
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                    line-height: 16px;
+                    height: 32px;
+                    padding-left: 12px;
+                    border-radius: 3px;
+                }
+            }
+
+            .phone_block {
+                float: left;
+                width: 100%;
+                padding-left: 87px;
+                position: relative;
+
+                &::before {
+                    @include media-breakpoint-down(sm) {
+                        width: 1px;
+                        height: 16px;
+                        background: $gray71;
+                        position: absolute;
+                        left: 40px;
+                        top: 8px;
+                        content: '';
+                        z-index: 9;
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding-left: 42px;
+                }
+
+                .code_number {
+                    position: absolute;
+                    width: 77px;
+                    left: 0px;
+                    top: 0px;
+                    padding-left: 35px;
+                    background-color: $lavender-blush;
+                    background-image: url(/images/frontend/ph_bg.png);
+                    background-repeat: no-repeat;
+                    background-position: top left;
+
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 12px;
+                        background-image: none;
+                        width: 44px;
+                    }
+                }
+            }
+        }
+
+        .devider {
+            width: 100%;
+            display: block;
+            height: 1px;
+            background: $silver;
+            margin: 15px 0 25px;
+        }
+    }
+
+    @at-root #{&}__changepassword {
+        @include media-breakpoint-only(md) {
+            @include float-css;
+            padding: 0 172px;
+        }
+
+        h2 {
+            font-size: 25px;
+            line-height: 30px;
+            @include font-Signika-Semibold;
+            color: $primary-color;
+            margin: 0px 0px 15px 0px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>facebook-color-circle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="7-Log-In" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="7A-Log-In@2x" transform="translate(-603.000000, -297.000000)" fill-rule="nonzero">
+            <g id="Group-5" transform="translate(499.000000, 62.000000)">
+                <g id="Group-4" transform="translate(0.000000, 114.000000)">
+                    <g id="Group" transform="translate(104.000000, 121.000000)">
+                        <g id="facebook-color-circle">
+                            <circle id="Oval" fill="#3B5998" cx="14.8932743" cy="14.8932743" r="14.8932743"></circle>
+                            <path d="M18.6374336,15.4762832 L15.9799115,15.4762832 L15.9799115,25.2122124 L11.9535398,25.2122124 L11.9535398,15.4762832 L10.0385841,15.4762832 L10.0385841,12.0546903 L11.9535398,12.0546903 L11.9535398,9.84053097 C11.9535398,8.25716814 12.7056637,5.77778761 16.0157522,5.77778761 L18.9982301,5.79026549 L18.9982301,9.11150442 L16.8342478,9.11150442 C16.479292,9.11150442 15.980177,9.28884956 15.980177,10.0441593 L15.980177,12.0578761 L18.9892035,12.0578761 L18.6374336,15.4762832 Z" id="Path" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

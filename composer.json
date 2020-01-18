@@ -1,0 +1,136 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "ext-json": "*",
+        "64robots/nova-fields": "^0.14.0",
+        "bakerkretzmar/nova-settings-tool": "^1.0",
+        "bensampo/laravel-enum": "^1.26",
+        "dillingham/nova-attach-many": "^1.0",
+        "dkulyk/nova-dependent-filter": "^1.0",
+        "doctrine/dbal": "^2.9",
+        "ebess/advanced-nova-media-library": "^2.7",
+        "eminiarts/nova-permissions": "^1.0",
+        "eminiarts/nova-tabs": "^1.0",
+        "epartment/nova-dependency-container": "^1.1",
+        "fideloper/proxy": "^4.0",
+        "fourstacks/nova-repeatable-fields": "^1.3",
+        "ivs/booking-price-breakdown-resource-tool": "*",
+        "ivs/coordinator-booking-viewer-tool": "*",
+        "ivs/coordinator-unit-viewer-tool": "*",
+        "ivs/coordinator-viewer-tool": "*",
+        "ivs/create-booking-tool": "*",
+        "ivs/edit-booking-tool": "*",
+        "ivs/invade-theme": "*",
+        "klepak/nova-multiselect-filter": "^1.1",
+        "jackabox/nova-duplicate-field": "^0.2.7",
+        "kirkbushell/eloquence": "~2.0",
+        "laravel/cashier": "^10.5",
+        "laravel/framework": "5.8.*",
+        "laravel/nova": "*",
+        "laravel/socialite": "^4.2",
+        "laravel/tinker": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "maatwebsite/excel": "^3.1",
+        "maatwebsite/laravel-nova-excel": "^1.1",
+        "mdixon18/fontawesome": "^0.1.1",
+        "myclabs/php-enum": "^1.7",
+        "owenmelbz/nova-radio-field": "^0.0.5",
+        "paypal/rest-api-sdk-php": "^1.14",
+        "saintsystems/nova-resource-group-menu": "^0.0.11",
+        "spatie/laravel-activitylog": "^3.9",
+        "yassi/nova-nested-form": "dev-master#efbf08a4d684fd385220355842a838707b99e7b0"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./admin"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/CreateBookingTool"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/EditBookingTool"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/BookingPriceBreakdownResourceTool"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/InvadeTheme"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jangidgirish/laravel-nova-nested-form.git"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/CoordinatorViewerTool"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/CoordinatorUnitViewerTool"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/CoordinatorBookingViewerTool"
+        }
+    ]
+}
